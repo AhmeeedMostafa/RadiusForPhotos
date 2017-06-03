@@ -19,7 +19,7 @@ Route::get('upload', function () {
 
 });
 
-Route::get('{anything}', 'PhotosController@photos')->where('anything', '[A-Za-z]+');
+Route::get('{anything}', 'PhotosController@photos')->where('anything', '[A-Za-z\-\.]+');
 
 Route::post('upload', 'PhotosController@upload')->name('upload');
 
